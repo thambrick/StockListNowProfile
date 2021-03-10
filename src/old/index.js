@@ -20,7 +20,7 @@ const myelement = (
                 <center><h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form  id='profileForm' method='post'>					
 				<table>
-				<tr><td>DisplayName For SLN..6666... </td><td><input type='text' value='' id='displayName'/></td></tr>
+				<tr><td>DisplayName For SLN..6666777... </td><td><input type='text' value='' id='displayName'/></td></tr>
 				<tr><td>City</td><td><input type='text' value='' id='city'/></td></tr>
 				<tr><td>Email</td><td><input type='text' value='' id='emailLabel'/></td></tr>
 			    <tr><td colspan='2' align='center'>
