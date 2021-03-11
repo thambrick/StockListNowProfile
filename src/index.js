@@ -51,7 +51,7 @@ class Container extends React.Component {
     //};
     return (
                 <center>
-			    <div style={{ width: 600, }}>
+			    //<div style={{ width: 600, }}>
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form  id='profileForm' method='post' >					
 				<table > 
@@ -62,7 +62,7 @@ class Container extends React.Component {
 				<input type='button' value="Submit" id='updateProfile'  onClick={this.updateProfile}/> </td></tr>
 			    </table>
                 </form>
-              	</div>		
+              	//</div>		
 				</center> 
         );
   }
