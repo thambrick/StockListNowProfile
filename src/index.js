@@ -51,12 +51,9 @@ class Container extends React.Component {
     //};
 	//<div style={{ width: 600, }}>
 	//</div>
-    return (    <section id="yourProfile" class="wrapper style2 spotlights">
-	            <section>
-	            <div class="content">
-				<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="top center" /></a>
+    return (    
                 <div class="inner">
-				<h2><label id='profileTitle'>Complete your Profile</label></h2>
+				<h2><label id='profileTitle'>Complete your Profile...</label></h2>
 				<form id='profileForm' method='post' >					
 				<table > 
 				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
@@ -66,10 +63,7 @@ class Container extends React.Component {
 				<input type='button' value="Submit" id='updateProfile' onClick={this.updateProfile}/> </td></tr>
 			    </table>
                 </form>
-                </div>	
-                </div>		
-                </section>				
-				</section>  
+                </div>	 
         );
   }
 }
