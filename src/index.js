@@ -55,7 +55,7 @@ class Container extends React.Component {
 	            <section id="yourProfile" class="wrapper style2 spotlights">
 	            <section>
 	            <div class="content">
-				<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="top center" /></a>
+				<img src="images/pic01.jpg" alt="" data-position="top center" />
                 <div class="inner">
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
