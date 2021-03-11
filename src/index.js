@@ -55,7 +55,7 @@ class Container extends React.Component {
 	            <section>
 	            <div class="content">
                 <div class="inner">
-				<h2><label id='profileTitle'>Complete your... Profile</label></h2>
+				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
 				<table > 
 				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
