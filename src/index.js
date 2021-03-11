@@ -3,6 +3,7 @@
 //const myfirstelement = <h1>Hello React!...ssss...</h1>
 //ReactDOM.render(myfirstelement, document.getElementById('root'));
 
+//import React, { Component } from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
@@ -43,6 +44,44 @@ class Container extends React.Component {
             .catch(error => alert(JSON.parse(error).body));
         }
 		*/
+		
+		try {
+			let userId = "testuserId";
+			let email = document.getElementById("emailLabel").value;
+			let displayName = document.getElementById("displayName").value;
+			let city = document.getElementById("city").value;
+			
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({"userId":userId,"email":email,"displayName":displayName,"city":city});
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+			fetch("https://u3yyrwv2r5.execute-api.us-west-2.amazonaws.com/dev", requestOptions)
+             .then(response => response.text())
+             //.then(result => document.getElementById('getDataInputLabel').innerHTML=JSON.parse(result).body)
+             //.then(result => setUpdateUserData(JSON.parse(result).body))
+			 .then(result => alert(JSON.parse(result).body))
+            .catch(error => alert(JSON.parse(error).body));
+			
+			
+			//const response =  fetch("https://u3yyrwv2r5.execute-api.us-west-2.amazonaws.com/dev", requestOptions);
+			//let responseJson =  response.json();
+			//this.setState(
+			//	{
+			//		isLoading: false,
+			//		dataSource: responseJson
+			//	},
+			//	function() {}
+			//);
+		} catch (error) {
+			//console.error(error);
+			alert(error);
+		}
+		
   }
   render() {
     //let myheader;
@@ -53,18 +92,16 @@ class Container extends React.Component {
 	//</div>
     return (
                 <center>
-			    
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
-				<form  id='profileForm' method='post' >					
+				<form id='profileForm' method='post' >					
 				<table > 
-				<tr><td>DisplayName </td><td><input type='text'  id='displayName' onchange={this.handleChange}/></td></tr>
-				<tr><td>City</td><td><input type='text'  id='city' onchange={this.handleChange}/></td></tr>
-				<tr><td>Email</td><td><input type='text'  id='emailLabel' onchange={this.handleChange}/></td></tr>
+				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
+				<tr><td>City</td><td><input type='text' id='city' onchange={this.handleChange}/></td></tr>
+				<tr><td>Email</td><td><input type='text' id='emailLabel' onchange={this.handleChange}/></td></tr>
 			    <tr><td colspan='2' align='center'>
-				<input type='button' value="Submit" id='updateProfile'  onClick={this.updateProfile}/> </td></tr>
+				<input type='button' value="Submit" id='updateProfile' onClick={this.updateProfile}/> </td></tr>
 			    </table>
-                </form>
-              			
+                </form>		
 				</center> 
         );
   }
