@@ -7,6 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
+import pic01 from './images/pic01.jpg'; // with import
 
 
 class Container extends React.Component {
@@ -55,7 +56,7 @@ class Container extends React.Component {
 	            <section id="yourProfile" class="wrapper style2 spotlights">
 	            <section>
 	            <div class="content">
-				<img src="images/pic01.jpg" alt="" data-position="top center" />
+				<img src={pic01} alt="" data-position="top center" />
                 <div class="inner">
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
