@@ -42,7 +42,7 @@ class Container extends React.Component {
     super(props);
 	//let userId2 = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 	//parent.iFrameWin = window;
-	alert("in react, userId2="); 
+	alert("in react, this.props.location.search="); 
 	alert(this.props.location.search);
 	//let email2 = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	//alert(email2);
