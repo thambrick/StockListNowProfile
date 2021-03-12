@@ -54,6 +54,9 @@ class Container extends React.Component {
 	//</div>
 	//<img src={pic01} alt="" data-position="top center" />
 	//<a href="#yourProfile" class="image"><img src={pic01} alt="" data-position="top center" /></a>
+	let displayName = document.cookie.replace(/(?:(?:^|.*;\s*)displayName\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	let city = document.cookie.replace(/(?:(?:^|.*;\s*)city\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	let email = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     return (    
 	            <section id="yourProfile" class="wrapper style2 spotlights">
 	            <section>
@@ -63,9 +66,9 @@ class Container extends React.Component {
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
 				<table> 
-				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
-				<tr><td>City</td><td><input type='text' id='city' onchange={this.handleChange}/></td></tr>
-				<tr><td>Email</td><td><input type='text' id='emailLabel' onchange={this.handleChange}/></td></tr>
+				<tr><td>DisplayName </td><td><input type='text' value={displayName} id='displayName' onchange={this.handleChange}/></td></tr>
+				<tr><td>City</td><td><input type='text' id='city' value={city} onchange={this.handleChange}/></td></tr>
+				<tr><td>Email</td><td><input type='text' id='emailLabel' value={email} onchange={this.handleChange}/></td></tr>
 			    <tr><td colspan='2' align='center'>
 				<input type='button' value="Submit" id='updateProfile' onClick={this.updateProfile}/> </td></tr>
 			    </table>
