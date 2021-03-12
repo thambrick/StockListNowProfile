@@ -38,10 +38,16 @@ function createCookieInHour (cookieName, cookieValue, hourToExpire) {
 
 
 class Container extends React.Component {
-  //constructor(props) {
-  //  super(props);
+  constructor(props) {
+    super(props);
+	//let userId2 = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+	//parent.iFrameWin = window;
+	alert("in react, userId2="); 
+	alert(this.props.location.search);
+	//let email2 = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	//alert(email2);
     //this.state = {show: true};
-  //}
+  }
   updateProfile = () => {
 	//alert("updated Profile."); 
     //alert(document.getElementById("displayName").value);	
