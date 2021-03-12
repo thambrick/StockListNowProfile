@@ -14,6 +14,8 @@ import './main.css';
 
 function setData(data){
    alert(data);
+   //frameElement.remove();
+   window.parent.document.getElementById('centerDiv').style.display = "none";
    
    //alert(document.getElementById("displayName").value);
    //alert(document.getElementById("city").value);
@@ -40,18 +42,31 @@ function setData(data){
 //}
 
 var userId;
+var email;
 
 class Container extends React.Component {
   constructor(props) {
     super(props);
 	//let userId2 = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 	//parent.iFrameWin = window;
-	alert("in react, userId="); 
+	//alert("in react, userId="); 
 	
 	//alert(this.props.location.search);
 	let params = window.location.search;
-	userId = params.replace("?userId=", "");
-	alert(userId);
+	//alert(params);
+	params = params.replace("?userid=", "");
+	//alert(params);
+	
+	//?userid=123&email=trey.hambrick@cox.net
+	
+	userId = params.substring(0, params.search("&email="));
+	//alert(userId);
+	email = params.replace(userId, "");
+	//alert(email);
+	email = email.replace("&email=", "");
+	//alert(email);
+	//this.document.getElementById("email").value=email;
+
 	//alert(location.search);
 	//let email2 = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	//alert(email2);
@@ -69,8 +84,8 @@ class Container extends React.Component {
 		
 		try {
 			//let userId = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
-			alert("userId===");
-			alert(userId);
+			//alert("userId===");
+			//alert(userId);
 			let email = document.getElementById("email").value;
 			let displayName = document.getElementById("displayName").value;
 			let city = document.getElementById("city").value;
@@ -118,7 +133,7 @@ class Container extends React.Component {
 				<table> 
 				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
 				<tr><td>City</td><td><input type='text' id='city' onchange={this.handleChange}/></td></tr>
-				<tr><td>Email</td><td><input type='text' id='email' onchange={this.handleChange}/></td></tr>
+                <tr><td>Email</td><td><input type='text' defaultValue={email} id='email' onchange={this.handleChange}/></td></tr>
 			    <tr><td colspan='2' align='center'>
 				<input type='button' value="Submit" id='updateProfile' onClick={this.updateProfile}/> </td></tr>
 			    </table>
