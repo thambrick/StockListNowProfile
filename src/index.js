@@ -49,7 +49,7 @@ class Container extends React.Component {
 		let userId = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 		if (!userId){ 
 		   alert("you must login before completing your profile"); 
-		   //return false;
+		   return false;
 		   }
 		
 		try {
