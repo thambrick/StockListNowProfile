@@ -55,7 +55,7 @@ class Container extends React.Component {
 	//<img src={pic01} alt="" data-position="top center" />
 	//<a href="#yourProfile" class="image"><img src={pic01} alt="" data-position="top center" /></a>
     return (    
-	            <section id="yourProfile" class="wrapper style2 spotlights">
+	            
 	            <section>
 	            <div class="content">
 				
@@ -73,7 +73,7 @@ class Container extends React.Component {
                 </div>	
                 </div>		
                 </section>				
-				</section>  
+				  
         );
   }
 }
