@@ -7,7 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
-import queryString from 'query-string';
+//import queryString from 'query-string';
 //import pic01 from './images/pic01.jpg'; // with import
 
 
@@ -33,11 +33,11 @@ function setData(data){
 	
 }
 
-function createCookieInHour (cookieName, cookieValue, hourToExpire) {
-    let date = new Date();
-    date.setTime(date.getTime()+(hourToExpire*60*60*1000));
-    document.cookie = cookieName + " = " + cookieValue + "; expires = " +date.toGMTString();
-}
+//function createCookieInHour (cookieName, cookieValue, hourToExpire) {
+//    let date = new Date();
+//    date.setTime(date.getTime()+(hourToExpire*60*60*1000));
+//    document.cookie = cookieName + " = " + cookieValue + "; expires = " +date.toGMTString();
+//}
 
 var userId;
 
@@ -78,7 +78,7 @@ class Container extends React.Component {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             var raw = JSON.stringify({"userId":userId,"email":email,"displayName":displayName,"city":city});
-			alert(raw);
+			//alert(raw);
             var requestOptions = {
                 method: 'POST',
                 headers: myHeaders,
@@ -87,8 +87,8 @@ class Container extends React.Component {
             };
 			fetch("https://u3yyrwv2r5.execute-api.us-west-2.amazonaws.com/dev", requestOptions)
              .then(response => response.text())
-			 .then(result => alert(JSON.parse(result).body))
-			 //.then(result => setData(JSON.parse(result).body))
+			 //.then(result => alert(JSON.parse(result).body))
+			 .then(result => setData(JSON.parse(result).body))
             .catch(error => alert(JSON.parse(error).body));
 		} catch (error) {
 			//console.error(error);
