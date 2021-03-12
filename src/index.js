@@ -15,7 +15,9 @@ import './main.css';
 function setData(data){
    alert(data);
    //frameElement.remove();
+   alert("try close now");
    window.parent.document.getElementById('centerDiv').style.display = "none";
+   alert("try close now11112222");
    
    //alert(document.getElementById("displayName").value);
    //alert(document.getElementById("city").value);
