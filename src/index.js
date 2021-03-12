@@ -12,10 +12,28 @@ import './main.css';
 function setData(data){
    alert(data);
    
-   alert(document.getElementById("displayName").value);
-   alert(document.getElementById("city").value);
-   alert(document.getElementById("email").value);
-				
+   //alert(document.getElementById("displayName").value);
+   //alert(document.getElementById("city").value);
+   //alert(document.getElementById("email").value);
+	
+	//window.close();
+    createCookieInHour("displayName",document.getElementById("displayName").value,9000);	
+	createCookieInHour("city",document.getElementById("city").value,9000);
+	createCookieInHour("email",document.getElementById("email").value,9000);
+	window.parent.getElementById('centerDiv').style.display = "none";	
+	//let email = document.getElementById("email").value;
+	//let displayName = document.getElementById("displayName").value;
+	//let city = document.getElementById("city").value;
+   //alert(email);
+   //alert(displayName);
+   //alert(city);
+	
+}
+
+function createCookieInHour (cookieName, cookieValue, hourToExpire) {
+    let date = new Date();
+    date.setTime(date.getTime()+(hourToExpire*60*60*1000));
+    document.cookie = cookieName + " = " + cookieValue + "; expires = " +date.toGMTString();
 }
 
 
@@ -31,11 +49,12 @@ class Container extends React.Component {
 		let userId = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 		if (!userId){ 
 		   alert("you must login before completing your profile"); 
-		   return false;
+		   //return false;
 		   }
 		
 		try {
-			let userId = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+			//let userId = document.cookie.replace(/(?:(?:^|.*;\s*)userId\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+			userId = "ttteesssttt";
 			let email = document.getElementById("email").value;
 			let displayName = document.getElementById("displayName").value;
 			let city = document.getElementById("city").value;
