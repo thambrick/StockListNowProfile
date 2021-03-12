@@ -16,9 +16,14 @@ function setData(data){
    alert(data);
    //frameElement.remove();
    alert("try close now");
-   window.parent.document.getElementById('centerDiv').style.display = "none";
+   //window.parent.document.getElementById('centerDiv').style.display = "none";
    alert("try close now11112222");
-   
+   //window.opener = null;
+   //window.open('', '_self');
+   //window.close();
+   //frames['iFrame'].document.getElementById('centerDiv').style.display = "none";
+   //window.parent.postMessage();
+   alert("try close now111122223333");
    //alert(document.getElementById("displayName").value);
    //alert(document.getElementById("city").value);
    //alert(document.getElementById("email").value);
@@ -126,9 +131,7 @@ class Container extends React.Component {
 	//<tr><td>Current Email</td><td>{email}</td></tr>
     return (    
 	            <section id="yourProfile" class="wrapper style2 spotlights">
-	            <section>
-	            <div class="content">
-				
+	           
                 <div class="inner">
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
@@ -140,9 +143,8 @@ class Container extends React.Component {
 				<input type='button' value="Submit" id='updateProfile' onClick={this.updateProfile}/> </td></tr>
 			    </table>
                 </form>
-                </div>	
                 </div>		
-                </section>				
+               				
 				</section>  
         );
   }
