@@ -53,11 +53,12 @@ class Container extends React.Component {
 	//<div style={{ width: 600, }}>
 	//</div>
 	//<img src={pic01} alt="" data-position="top center" />
+	//<a href="#yourProfile" class="image"><img src={pic01} alt="" data-position="top center" /></a>
     return (    
 	            <section id="yourProfile" class="wrapper style2 spotlights">
 	            <section>
 	            <div class="content">
-				<a href="#yourProfile" class="image"><img src={pic01} alt="" data-position="top center" /></a>
+				
                 <div class="inner">
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
