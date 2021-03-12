@@ -16,8 +16,8 @@ class Container extends React.Component {
     //this.state = {show: true};
   //}
   updateProfile = () => {
-	alert("updated Profile."); 
-    alert(document.getElementById("displayName").value);	
+	//alert("updated Profile."); 
+    //alert(document.getElementById("displayName").value);	
     //this.setState({show: false});
 		
 		try {
@@ -57,11 +57,11 @@ class Container extends React.Component {
 	            <section id="yourProfile" class="wrapper style2 spotlights">
 	            <section>
 	            <div class="content">
-				
+				<a href="#yourProfile" class="image"><img src={pic01} alt="" data-position="top center" /></a>
                 <div class="inner">
 				<h2><label id='profileTitle'>Complete your Profile</label></h2>
 				<form id='profileForm' method='post' >					
-				<table > 
+				<table> 
 				<tr><td>DisplayName </td><td><input type='text' id='displayName' onchange={this.handleChange}/></td></tr>
 				<tr><td>City</td><td><input type='text' id='city' onchange={this.handleChange}/></td></tr>
 				<tr><td>Email</td><td><input type='text' id='emailLabel' onchange={this.handleChange}/></td></tr>
