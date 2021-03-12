@@ -44,6 +44,7 @@ class Container extends React.Component {
 	//parent.iFrameWin = window;
 	alert("in react, this.props.location.search="); 
 	alert(this.props.location.search);
+	alert(location.search);
 	//let email2 = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	//alert(email2);
     //this.state = {show: true};
